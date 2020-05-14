@@ -3,76 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman</title>
+    <title>Sports Quiz</title>
     <link rel="stylesheet" href="main.scss">
     <style>
-        body{
-      background-color: #232374;
-  }
-
-  h1{
+h1{
       color: chartreuse;
-      font-size: 50px;
+      font-size: 70px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif
   }
 
-  .hm{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+body {
+background-color: navy;
+font-family: Helvetica;
 }
 
 p{
-      color: chartreuse;
-      font-size: 30px;
-      text-align: center;
-  }
+    color: white;
+    text-align: center;
+}
 
-  .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 200px;}
+main {
+width: 80px;
+border: 1px navy;
+padding: 10px;
+
+}
+
+header {
+margin-top: 0;
+border: 2px black;
+padding: 5px;
+height: 250px;
+background: navy;
+color: white;
+}
+
+div {
+  width: 2000px;
+}
+ 
+h2{
+    color: black;
+    font-size: 40px;
+}
+
+
+button {
+width: 400px;
+margin-top: 70px;
+display: block;
+border: navy;
+border-radius: 50px;
+}
+
+.answers{
+  width: 300px;
+  border: 15px solid chartreuse;
+  padding: 50px;
+  margin: 20px;
+}
+
+.QA{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.SportsForm{
+    background-image: url(/images/soccer3.jpg);
+}
+
     </style>
 </head>
 <body>
-    <script src="hangman.js"></script>
+
+    <h1 style="text-align: center;">Sports Quiz</h1>
+
+   <div id="main">
+    <div id="header">
+    </div>
+    
+    <form id="SportsForm" class="SportsForm">
+
+        <h2>What sport is condsidered the most popular sport in the world?</h2> <br>
+        <input type="radio" name="Question1" value="a"> Soccer</br>
+        <input type="radio" name="Question1" value="b"> Football</br>
+        <input type="radio" name="Question1" value="c"> Tennis</br>
+        <input type="radio" name="Question1" value="d"> Golf</br>
+        <input type="radio" name="Question1" value="e"> Baseball</br><br>
+
+        
+
+        <h2>Who won the 2020 Super Bowl?</h2> <br>
+        <input type="radio" name="Question2" value="b"> Dallas Cowboys</br>
+        <input type="radio" name="Question2" value="a"> Kansas City Chiefs</br>
+        <input type="radio" name="Question2" value="c"> New York Giants</br>
+        <input type="radio" name="Question2" value="d"> Green Bay Packers</br>
+        <input type="radio" name="Question2" value="e"> Baltimore Ravens</br><br>
+
+        
+
+        <h2>How many years does the World Cup take place?</h2> <br>
+        <input type="radio" name="Question3" value="e"> 3</br>
+        <input type="radio" name="Question3" value="b"> 1</br>
+        <input type="radio" name="Question3" value="d"> 5</br>
+        <input type="radio" name="Question3" value="c"> 2</br>
+        <input type="radio" name="Question3" value="a"> 4</br><br>
+
+        
+
+        <h2>When did the San Antonio Spurs last win the NBA championship?</h2> <br>
+        <input type="radio" name="Question4" value="e"> 2019</br>
+        <input type="radio" name="Question4" value="d"> 2010</br>
+        <input type="radio" name="Question4" value="c"> 2013</br>
+        <input type="radio" name="Question4" value="b"> 2016</br>
+        <input type="radio" name="Question4" value="a"> 2014</br><br>
+
+        
+
+        <h2>What other sport did Michael Jordan play when he first retired?</h2> <br>
+        <input type="radio" name="Question5" value="e"> Rugby</br>
+        <input type="radio" name="Question5" value="d"> Football</br>
+        <input type="radio" name="Question5" value="c"> Tennis</br>
+        <input type="radio" name="Question5" value="b"> Soccer</br>
+        <input type="radio" name="Question5" value="a"> Baseball</br><br>
+
+        
+
+        <h2>What country won the last World Cup?</h2> <br>
+        <input type="radio" name="Question6" value="c"> Brazil</br>
+        <input type="radio" name="Question6" value="d"> Germany</br>
+        <input type="radio" name="Question6" value="a"> France</br>
+        <input type="radio" name="Question6" value="b"> U.S.</br>
+        <input type="radio" name="Question6" value="e"> Mexico</br><br>
+
+
+        <input type="button" style="width: 90px;" value="submit" onclick="check()">
+
+    </form>
+
+    <hr>
+
+    <div class="answers">
+        <p class="QA" id="QuizAnswers">Click below to see the answers!</p>
+    </div>
+
+    <div class="center">
+        <button id="button" onclick="myFunction()">Answers</button>
+      </div>
+
+
+    <script src="main.js"></script>
+    
    
-   <h1 style="text-align: center;">Welcome to Hangman!</h1>
-
-   <img src="images/Hangman Background.jpg" class="hm">
 
 
-   <hr>
-
-   
-
-   <p id="learnMore">Having some trouble guessing? Click on the hint below!</p>
-
-
-<div class="center">
-  <button id="button" onclick="myFunction()">Hints</button>
-</div>
-
-<p>What software did I use to build this game?</p>
-<p>Meat that comes from a cow?</p>
-<p>2nd larget state in the U.S.</p>
-<p>What sport did Michael Jordan play?</p>
-<p>A wireless computer</p>
-<p>A country with red, white, and green on their flag</p>
-
-
-
-  
-
-   <script src="/hangman.js"></script>
-
-   
-   
-
-   
-   
-   
-   
-   
 </body>
 </html>
